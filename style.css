@@ -1,5 +1,17 @@
 /* Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Englebert&display=swap");
+
+:root {
+  --darkBgColor: #12131b;
+  --darkBgNavbarColor: #53535c;
+  --themeIconBgColor: #595984;
+  --txtColor: #fff;
+  --textAreaBgColor: #22222c;
+  --totalCharBgColor: #d3a1fa;
+  --sentenceBgColor: #ff9f00;
+  --wordBgColor: #ff8159;
+}
 
 * {
   margin: 0px;
@@ -9,4 +21,116 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--darkBgColor);
+}
+
+.main-container {
+  padding: 40px 80px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.navbar-container > h2 {
+  font-family: "Englebert" !important;
+  font-size: 50px;
+  color: white;
+}
+
+#themeIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  /* background-color: var(--themeIconBgColor); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.text-analyzer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.text-analyzer-container > h1 {
+  font-family: "Englebert" !important;
+  font-size: 7vw;
+  color: var(--txtColor);
+}
+
+.text-analyzer-container textarea {
+  border: 1px solid #c1c1c1;
+  background-color: var(--textAreaBgColor);
+  border-radius: 10px;
+  padding: 10px 8px;
+  color: var(--txtColor);
+  width: 100%;
+}
+
+textarea::placeholder {
+  color: var(--txtColor);
+}
+
+.results-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 10px;
+  width: 100%;
+}
+
+.results-container h3 {
+  font-family: "Englebert";
+  font-size: 35px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.results-container h4 {
+  font-family: "Englebert";
+  font-weight: bold;
+  font-size: 35px;
+  margin: 10px;
+}
+
+.total-character-counting-container,
+.word-counting-container,
+.sentences-counting-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px 10px;
+  background-color: var(--totalCharBgColor);
+  padding: 10px;
+}
+
+.word-counting-container {
+  background-color: var(--wordBgColor) !important;
+}
+
+.sentences-counting-container {
+  background-color: var(--sentenceBgColor) !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-container {
+    padding: 10px 40px;
+  }
+  
+  .results-container {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .text-analyzer-container {
+    gap: 20px;
+  }
 }

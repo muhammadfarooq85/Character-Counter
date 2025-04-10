@@ -6,12 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Character Counter</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
-
+    <div class="main-container">
+        <!-- Navbar Section -->
+        <section>
+            <nav class="navbar-container">
+                <h2>Character Counter</h2>
+                <button id="themeIcon">
+                    <img src="./assets/images/icon-sun.svg" width="40px" alt="theme-icon">
+                </button>
+            </nav>
+        </section>
+        <!-- Text Analyzer Section -->
+        <section class="text-analyzer-container">
+            <h1>Analyze you text in real-time</h1>
+            <textarea id="textInput" rows="10" placeholder="Start typing here..."></textarea>
+            <!-- Text Rsults -->
+            <section class="results-container">
+                <div class="total-character-counting-container">
+                    <h3>Total Characters</h3>
+                    <h4 id="totalChars">00</h4>
+                </div>
+                <div class="word-counting-container">
+                    <h3>Word Count</h3>
+                    <h4 id="totalWords">00</h4>
+                </div>
+                <div class="sentences-counting-container">
+                    <h3>Sentence Count</h3>
+                    <h4 id="totalSentences">00</h4>
+                </div>
+            </section>
+        </section>
+    </div>
     <!-- Custom Js -->
-    <script src="app.js"></script>
+    <script src=" app.js">
+    </script>
 </body>
 
 </html>
